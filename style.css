@@ -20,10 +20,18 @@
     --gradient-party: linear-gradient(135deg, #ff6b9d 0%, #ffc93c 50%, #c780fa 100%);
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     color: var(--text-dark);
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     background: #f8f9fa;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -33,6 +41,7 @@ body {
     text-size-adjust: 100%;
     /* Better touch scrolling on iOS */
     -webkit-overflow-scrolling: touch;
+    position: relative;
 }
 
 /* Improve touch targets for mobile */
@@ -149,6 +158,8 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     align-items: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .confetti {
@@ -184,6 +195,8 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     color: white;
     z-index: 2;
     padding: 2rem;
+    max-width: 100%;
+    width: 100%;
 }
 
 .balloon-decoration {
@@ -363,6 +376,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
 }
 
 /* Section Title */
@@ -373,6 +387,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     margin-bottom: 3rem;
     color: var(--primary-color);
     position: relative;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .title-icon {
@@ -396,6 +413,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .introduction {
     padding: 6rem 0;
     background: white;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .intro-content {
@@ -403,6 +423,8 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .intro-image {
@@ -504,12 +526,17 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .gallery {
     padding: 6rem 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .gallery-item {
@@ -568,12 +595,16 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .timeline {
     padding: 6rem 0;
     background: white;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .timeline-container {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .timeline-container::before {
@@ -665,6 +696,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .location {
     padding: 6rem 0;
     background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .location-content {
@@ -672,6 +706,8 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .location-card {
@@ -779,12 +815,17 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     padding: 6rem 0;
     background: var(--gradient-party);
     color: white;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .rsvp-content {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .rsvp-icon {
@@ -853,6 +894,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     color: white;
     padding: 3rem 0;
     text-align: center;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .footer-hearts {
@@ -915,6 +959,8 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     height: 100%;
     pointer-events: none;
     z-index: 1;
+    overflow: hidden;
+    max-width: 100vw;
 }
 
 .float-balloon {
@@ -1006,6 +1052,16 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         width: 100px;
         height: 140px;
     }
+    
+    /* Ensure no overflow */
+    .container {
+        padding: 0 1.5rem;
+        max-width: 100%;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 /* Tablets */
@@ -1013,11 +1069,18 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .hero {
         min-height: 100vh;
         padding: 2rem 1rem;
+        width: 100%;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+        max-width: 100%;
     }
     
     .hero-title {
         font-size: 2.5rem;
         line-height: 1.2;
+        word-wrap: break-word;
     }
     
     .hero-name {
@@ -1031,11 +1094,14 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .name-highlight {
         padding: 0.4rem 1.5rem;
         font-size: 2rem;
+        max-width: 100%;
+        word-wrap: break-word;
     }
     
     .section-title {
         font-size: 2rem;
         margin-bottom: 2rem;
+        padding: 0 1rem;
     }
     
     .title-icon {
@@ -1046,11 +1112,32 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .countdown-container {
         padding: 1.5rem;
         margin: 2rem 0;
+        max-width: 100%;
     }
     
     .countdown-title {
         font-size: 1.2rem;
         margin-bottom: 1rem;
+    }
+    
+    .countdown {
+        gap: 1rem;
+        max-width: 100%;
+    }
+    
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
     }
     
     .countdown {
@@ -1208,15 +1295,21 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .hero {
         min-height: 100vh;
         padding: 1.5rem 1rem;
+        width: 100%;
+        max-width: 100vw;
     }
     
     .hero-content {
         padding: 1rem;
+        max-width: 100%;
+        width: 100%;
     }
     
     .hero-title {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .sparkle {
@@ -1226,11 +1319,15 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .hero-name {
         font-size: 1.5rem;
         margin: 0.8rem 0;
+        max-width: 100%;
     }
     
     .name-highlight {
         padding: 0.3rem 1rem;
         font-size: 1.5rem;
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
     
     .hero-age {
@@ -1241,12 +1338,16 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .age-number {
         padding: 0.3rem 1rem;
         font-size: 1.2rem;
+        max-width: 100%;
     }
     
     /* Countdown */
     .countdown-container {
         padding: 1rem;
         margin: 1.5rem 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .countdown-title {
@@ -1256,11 +1357,15 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     
     .countdown {
         gap: 0.5rem;
+        max-width: 100%;
+        justify-content: space-between;
     }
     
     .countdown-item {
         padding: 0.8rem 0.5rem;
         min-width: 60px;
+        flex: 1;
+        max-width: calc(25% - 0.375rem);
     }
     
     .countdown-item span {
@@ -1280,12 +1385,16 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     /* Container */
     .container {
         padding: 0 1rem;
+        max-width: 100%;
+        width: 100%;
     }
     
     /* Section Title */
     .section-title {
         font-size: 1.8rem;
         margin-bottom: 2rem;
+        padding: 0 0.5rem;
+        word-wrap: break-word;
     }
     
     .title-icon {
@@ -1299,16 +1408,20 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .location,
     .rsvp {
         padding: 3rem 0;
+        width: 100%;
+        max-width: 100vw;
     }
     
     /* Introduction */
     .intro-card {
         padding: 1.5rem;
+        max-width: 100%;
     }
     
     .intro-card h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
+        word-wrap: break-word;
     }
     
     .card-icon {
@@ -1319,6 +1432,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         font-size: 0.95rem;
         line-height: 1.7;
         margin-bottom: 1.5rem;
+        word-wrap: break-word;
     }
     
     .detail-item {
@@ -1326,6 +1440,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         flex-direction: column;
         text-align: center;
         gap: 0.5rem;
+        max-width: 100%;
     }
     
     .detail-item i {
@@ -1335,19 +1450,24 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     
     .detail-item strong {
         font-size: 0.9rem;
+        word-wrap: break-word;
     }
     
     .detail-item span {
         font-size: 0.9rem;
+        word-wrap: break-word;
     }
     
     .image-frame {
         transform: rotate(0deg);
         margin-bottom: 2rem;
+        max-width: 100%;
     }
     
     .image-frame img {
         height: 400px;
+        max-width: 100%;
+        object-fit: cover;
     }
     
     .frame-decoration {
@@ -1359,14 +1479,19 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
     }
     
     .gallery-item {
         border-radius: 15px;
+        max-width: 100%;
     }
     
     .gallery-item img {
         height: 450px;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
     }
     
     .gallery-overlay {
@@ -1375,6 +1500,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     
     .gallery-overlay p {
         font-size: 1rem;
+        word-wrap: break-word;
     }
     
     /* Timeline */
