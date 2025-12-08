@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
 // Countdown Timer
 function updateCountdown() {
     // Set target date - thay đổi ngày tháng năm phù hợp
-    const targetDate = new Date('2025-12-24T16:00:00').getTime();
+    const targetDate = new Date('2025-12-20T08:00:00').getTime();
     
     function update() {
         const now = new Date().getTime();

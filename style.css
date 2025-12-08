@@ -1115,7 +1115,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     }
     
     .gallery-item img {
-        height: 300px;
+        height: 350px;
     }
     
     /* Timeline */
@@ -1347,7 +1347,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     }
     
     .image-frame img {
-        height: 300px;
+        height: 400px;
     }
     
     .frame-decoration {
@@ -1366,7 +1366,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     }
     
     .gallery-item img {
-        height: 250px;
+        height: 450px;
     }
     
     .gallery-overlay {
