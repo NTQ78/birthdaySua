@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Sinh Nhật Bé Yêu 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="balloon-container">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            <h2>Đang chuẩn bị...</h2>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="confetti"></div>
+        <div class="hero-content">
+            <div class="balloon-decoration left" data-aos="fade-right" data-aos-delay="300"></div>
+            <div class="balloon-decoration right" data-aos="fade-left" data-aos-delay="300"></div>
+            
+            <h1 class="hero-title" data-aos="zoom-in" data-aos-duration="1000">
+                <span class="sparkle">✨</span> 
+                Chúc Mừng Sinh Nhật 
+                <span class="sparkle">✨</span>
+            </h1>
+            <div class="hero-name" data-aos="fade-up" data-aos-delay="200">
+                <span class="name-highlight">Bé Yêu</span>
+            </div>
+            <div class="hero-age" data-aos="fade-up" data-aos-delay="400">
+                <span class="age-number">🎂 5 Tuổi 🎂</span>
+            </div>
+            
+            <div class="countdown-container" data-aos="fade-up" data-aos-delay="600">
+                <div class="countdown-title">Đếm ngược đến bữa tiệc</div>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <small>Ngày</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <small>Giờ</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <small>Phút</small>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <small>Giây</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-down" data-aos="fade-up" data-aos-delay="800">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction" id="introduction">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-icon">🎈</span>
+                Lời Mời
+                <span class="title-icon">🎈</span>
+            </h2>
+            
+            <div class="intro-content">
+                <div class="intro-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?w=500" alt="Birthday Baby">
+                        <div class="frame-decoration"></div>
+                    </div>
+                </div>
+                
+                <div class="intro-text" data-aos="fade-left">
+                    <div class="intro-card">
+                        <div class="card-icon">🎉</div>
+                        <h3>Kính Mời Quý Khách</h3>
+                        <p class="intro-message">
+                            Bé nhà em sắp tròn 5 tuổi rồi! 
+                            <br><br>
+                            Để đánh dấu cột mốc đặc biệt này, gia đình chúng em xin trân trọng kính mời quý khách đến dự bữa tiệc sinh nhật ấm cúng và đầy niềm vui.
+                            <br><br>
+                            Sự hiện diện của quý khách sẽ là món quà ý nghĩa nhất dành cho bé yêu! 🎁
+                        </p>
+                        
+                        <div class="event-details">
+                            <div class="detail-item" data-aos="zoom-in" data-aos-delay="100">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <strong>Ngày:</strong>
+                                    <span>Chủ Nhật, 15/12/2025</span>
+                                </div>
+                            </div>
+                            <div class="detail-item" data-aos="zoom-in" data-aos-delay="200">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Giờ:</strong>
+                                    <span>16:00 - 19:00</span>
+                                </div>
+                            </div>
+                            <div class="detail-item" data-aos="zoom-in" data-aos-delay="300">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Địa điểm:</strong>
+                                    <span>123 Đường ABC, Quận 1, TP.HCM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-icon">📸</span>
+                Khoảnh Khắc Đáng Nhớ
+                <span class="title-icon">📸</span>
+            </h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="flip-left" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500" alt="Baby photo 1">
+                    <div class="gallery-overlay">
+                        <p>Bé 1 tuổi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500" alt="Baby photo 2">
+                    <div class="gallery-overlay">
+                        <p>Bé 2 tuổi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="flip-left" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1558045267-5e0e5bd28e49?w=500" alt="Baby photo 3">
+                    <div class="gallery-overlay">
+                        <p>Bé 3 tuổi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="flip-left" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1607734834667-14e7cd1bc90a?w=500" alt="Baby photo 4">
+                    <div class="gallery-overlay">
+                        <p>Bé 4 tuổi</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="flip-left" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1464692805480-a69dfaafdb0d?w=500" alt="Baby photo 5">
+                    <div class="gallery-overlay">
+                        <p>Kỷ niệm gia đình</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="flip-left" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=500" alt="Baby photo 6">
+                    <div class="gallery-overlay">
+                        <p>Bé vui chơi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-icon">⏰</span>
+                Chương Trình Tiệc
+                <span class="title-icon">⏰</span>
+            </h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>16:00</h3>
+                        <h4>Đón Khách</h4>
+                        <p>Chào đón quý khách và check-in</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>16:30</h3>
+                        <h4>Vui Chơi & Trò Chơi</h4>
+                        <p>Các trò chơi vui nhộn cho các bé</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>17:30</h3>
+                        <h4>Thổi Nến & Cắt Bánh</h4>
+                        <p>Thổi nến sinh nhật và cắt bánh</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>18:00</h3>
+                        <h4>Buffet & Tiệc Nhẹ</h4>
+                        <p>Thưởng thức buffet và đồ uống</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>18:30</h3>
+                        <h4>Trao Quà & Chụp Ảnh</h4>
+                        <p>Trao quà và chụp ảnh lưu niệm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">
+                <span class="title-icon">📍</span>
+                Địa Điểm
+                <span class="title-icon">📍</span>
+            </h2>
+            
+            <div class="location-content">
+                <div class="location-info" data-aos="fade-right">
+                    <div class="location-card">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Địa chỉ chi tiết</h3>
+                        <p class="address">
+                            <i class="fas fa-home"></i>
+                            123 Đường ABC, Phường Bến Nghé<br>
+                            Quận 1, TP. Hồ Chí Minh
+                        </p>
+                        <p class="phone">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0123456789">0123 456 789</a>
+                        </p>
+                        <div class="location-buttons">
+                            <a href="https://maps.google.com" target="_blank" class="btn-map">
+                                <i class="fas fa-directions"></i>
+                                Chỉ Đường
+                            </a>
+                            <a href="tel:0123456789" class="btn-call">
+                                <i class="fas fa-phone-alt"></i>
+                                Gọi Ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-map" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4976898904157!2d106.70304731533366!3d10.776530392319904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4b3330bcc9%3A0xb98828ba037dc3b7!2zUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp" id="rsvp">
+        <div class="container">
+            <div class="rsvp-content" data-aos="zoom-in">
+                <div class="rsvp-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h2>Xác Nhận Tham Dự</h2>
+                <p>Vui lòng cho chúng em biết bạn có thể tham dự không nhé! 💕</p>
+                <div class="rsvp-buttons">
+                    <a href="tel:0123456789" class="btn-rsvp primary">
+                        <i class="fas fa-check-circle"></i>
+                        Tôi Sẽ Đến
+                    </a>
+                    <a href="sms:0123456789" class="btn-rsvp secondary">
+                        <i class="fas fa-comment-dots"></i>
+                        Gửi Tin Nhắn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-hearts">
+                <span>💝</span>
+                <span>🎈</span>
+                <span>🎂</span>
+                <span>🎁</span>
+                <span>🎉</span>
+            </div>
+            <p>Cảm ơn bạn đã đến chúc mừng sinh nhật bé yêu!</p>
+            <p class="footer-small">Made with <span class="heart">❤️</span> for Birthday Party</p>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="float-balloon" style="--delay: 0s; --duration: 6s; left: 10%;"></div>
+        <div class="float-balloon" style="--delay: 2s; --duration: 7s; left: 30%;"></div>
+        <div class="float-balloon" style="--delay: 1s; --duration: 8s; left: 50%;"></div>
+        <div class="float-balloon" style="--delay: 3s; --duration: 6.5s; left: 70%;"></div>
+        <div class="float-balloon" style="--delay: 1.5s; --duration: 7.5s; left: 90%;"></div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
