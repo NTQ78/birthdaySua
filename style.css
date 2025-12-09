@@ -152,7 +152,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: var(--gradient-party);
+    background: url('./assets/background.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,11 +162,41 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     max-width: 100vw;
 }
 
+/* Overlay với blur effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+/* Gradient overlay để tăng độ tương phản */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(255, 107, 157, 0.3) 0%, 
+        rgba(255, 201, 60, 0.3) 50%, 
+        rgba(199, 128, 250, 0.3) 100%);
+    z-index: 1;
+}
+
 .confetti {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 2;
 }
 
 .confetti::before,
@@ -177,6 +207,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     height: 10px;
     background: var(--secondary-color);
     animation: confetti-fall 5s linear infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
 }
 
 @keyframes confetti-fall {
@@ -193,10 +224,20 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .hero-content {
     text-align: center;
     color: white;
-    z-index: 2;
+    z-index: 10;
     padding: 2rem;
     max-width: 100%;
     width: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 0 50px rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    max-width: 95%;
+    margin: 0 auto;
 }
 
 .balloon-decoration {
@@ -236,13 +277,26 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
     margin-bottom: 1rem;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+        3px 3px 8px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 107, 157, 0.6);
     animation: bounceIn 1s;
+    color: #ffffff;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
 }
 
 .sparkle {
     display: inline-block;
     animation: spin 2s linear infinite;
+    flex-shrink: 0;
+    font-size: 0.8em;
 }
 
 @keyframes spin {
@@ -258,16 +312,24 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     font-size: 3.5rem;
     font-weight: 700;
     margin: 1rem 0;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 }
 
 .name-highlight {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
     color: var(--primary-color);
     padding: 0.5rem 2rem;
     border-radius: 50px;
     display: inline-block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.8),
+        inset 0 2px 10px rgba(255, 255, 255, 0.8);
     animation: scaleIn 1s 0.5s both;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    font-weight: 800;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 2px;
 }
 
 @keyframes scaleIn {
@@ -280,32 +342,114 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 }
 
 .hero-age {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 1.5rem 0;
     font-weight: 700;
     color: white;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 }
 
 .age-number {
-    background: rgba(255, 255, 255, 0.24);
-    padding: 0.5rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
+    padding: 0.8rem 2.5rem;
     border-radius: 50px;
     backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5),
+                0 0 30px rgba(255, 201, 60, 0.4),
+                inset 0 2px 10px rgba(255, 255, 255, 0.8);
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(255, 107, 157, 0.3);
+    letter-spacing: 1px;
+    /* animation: glowPulse 2s ease-in-out infinite, floatGentle 3s ease-in-out infinite; */
+    position: relative;
+    display: inline-block;
+    font-family: 'Pacifico', cursive;
+}
+
+.age-number::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, 
+        var(--primary-color), 
+        var(--secondary-color), 
+        var(--accent-color),
+        var(--purple),
+        var(--primary-color));
+    background-size: 400% 400%;
+    z-index: -1;
+    opacity: 0.6;
+    animation: gradientRotate 3s ease infinite;
+    filter: blur(10px);
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 10px 40px rgba(255, 107, 157, 0.5),
+                    0 0 30px rgba(255, 201, 60, 0.4),
+                    inset 0 2px 10px rgba(255, 255, 255, 0.8);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 15px 50px rgba(255, 107, 157, 0.8),
+                    0 0 50px rgba(255, 201, 60, 0.7),
+                    inset 0 2px 15px rgba(255, 255, 255, 1);
+        transform: scale(1.05);
+    }
+}
+
+@keyframes floatGentle {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+}
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Countdown */
 .countdown-container {
     margin: 3rem 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
     padding: 2rem;
     border-radius: 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 0 30px rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .countdown-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 
+        2px 2px 6px rgba(0, 0, 0, 0.7),
+        0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .countdown {
@@ -316,12 +460,16 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 }
 
 .countdown-item {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #fff5f7 100%);
     color: var(--primary-color);
     padding: 1.5rem 2rem;
     border-radius: 15px;
     min-width: 100px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        inset 0 2px 10px rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .countdown-item span {
@@ -1083,6 +1231,11 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         font-size: 2.5rem;
         line-height: 1.2;
         word-wrap: break-word;
+        gap: 0.8rem;
+    }
+    
+    .sparkle {
+        font-size: 0.8em;
     }
     
     .hero-name {
@@ -1098,6 +1251,13 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         font-size: 2rem;
         max-width: 100%;
         word-wrap: break-word;
+        letter-spacing: 1.5px;
+    }
+    
+    .age-number {
+        padding: 0.6rem 1.8rem;
+        font-size: 1em;
+        border: 2px solid rgba(255, 255, 255, 0.8);
     }
     
     .section-title {
@@ -1312,10 +1472,13 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         margin-bottom: 0.5rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
     }
     
     .sparkle {
-        font-size: 1.5rem;
+        font-size: 0.8em;
+        flex-shrink: 0;
     }
     
     .hero-name {
@@ -1330,6 +1493,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
         max-width: 100%;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        letter-spacing: 1px;
     }
     
     .hero-age {
@@ -1338,9 +1502,17 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     }
     
     .age-number {
-        padding: 0.3rem 1rem;
-        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 1em;
         max-width: 100%;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0 8px 30px rgba(255, 107, 157, 0.4),
+                    0 0 20px rgba(255, 201, 60, 0.3),
+                    inset 0 2px 8px rgba(255, 255, 255, 0.8);
+    }
+    
+    .age-number::before {
+        filter: blur(8px);
     }
     
     /* Countdown */
@@ -1675,6 +1847,11 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 @media (max-width: 360px) {
     .hero-title {
         font-size: 1.5rem;
+        gap: 0.4rem;
+    }
+    
+    .sparkle {
+        font-size: 0.7em;
     }
     
     .hero-name {
@@ -1684,6 +1861,13 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     .name-highlight {
         padding: 0.3rem 0.8rem;
         font-size: 1.3rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .age-number {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.95em;
+        letter-spacing: 0.5px;
     }
     
     .countdown-item {
