@@ -280,12 +280,14 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 }
 
 .hero-age {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 1.5rem 0;
+    font-weight: 700;
+    color: white;
 }
 
 .age-number {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.24);
     padding: 0.5rem 2rem;
     border-radius: 50px;
     backdrop-filter: blur(10px);
