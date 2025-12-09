@@ -99,44 +99,47 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .balloon {
     width: 60px;
     height: 80px;
-    background: var(--white);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    animation: float 3s ease-in-out infinite;
+    animation: jellyfish-float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(168, 230, 207, 0.6));
+}
+
+.balloon::before {
+    content: '🪼';
+    display: block;
 }
 
 .balloon:nth-child(1) {
-    background: var(--primary-color);
     animation-delay: 0s;
+    filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.6));
 }
 
 .balloon:nth-child(2) {
-    background: var(--secondary-color);
     animation-delay: 0.5s;
+    filter: drop-shadow(0 0 10px rgba(255, 201, 60, 0.6));
 }
 
 .balloon:nth-child(3) {
-    background: var(--accent-color);
     animation-delay: 1s;
+    filter: drop-shadow(0 0 10px rgba(168, 230, 207, 0.6));
 }
 
-.balloon::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-@keyframes float {
+@keyframes jellyfish-float {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) rotate(5deg);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-25px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-15px) rotate(-5deg);
     }
 }
 
@@ -229,47 +232,58 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     max-width: 100%;
     width: 100%;
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 30px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); */
+    /* border-radius: 30px; */
+    /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
                 inset 0 0 50px rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3); */
     max-width: 95%;
     margin: 0 auto;
 }
 
 .balloon-decoration {
     position: absolute;
-    width: 150px;
-    height: 200px;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent);
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    animation: sway 4s ease-in-out infinite;
+    width: 120px;
+    height: 120px;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: jellyfish-sway 4s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.balloon-decoration::before {
+    content: '🪼';
+    display: block;
 }
 
 .balloon-decoration.left {
     top: 10%;
     left: 5%;
-    background-color: rgba(255, 107, 157, 0.6);
+    filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.7));
 }
 
 .balloon-decoration.right {
     top: 15%;
     right: 5%;
-    background-color: rgba(255, 201, 60, 0.6);
+    filter: drop-shadow(0 0 20px rgba(255, 201, 60, 0.7));
 }
 
-@keyframes sway {
+@keyframes jellyfish-sway {
     0%, 100% {
-        transform: rotate(0deg) translateX(0);
+        transform: rotate(0deg) translateX(0) translateY(0);
     }
     25% {
-        transform: rotate(5deg) translateX(10px);
+        transform: rotate(10deg) translateX(15px) translateY(-10px);
+    }
+    50% {
+        transform: rotate(0deg) translateX(0) translateY(-20px);
     }
     75% {
-        transform: rotate(-5deg) translateX(-10px);
+        transform: rotate(-10deg) translateX(-15px) translateY(-10px);
     }
 }
 
@@ -1116,41 +1130,49 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 .float-balloon {
     position: absolute;
     bottom: -100px;
-    width: 40px;
-    height: 60px;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: floatUp var(--duration) linear infinite;
     animation-delay: var(--delay);
-    opacity: 0.6;
+    opacity: 0.7;
+}
+
+.float-balloon::before {
+    content: '🪼';
+    display: block;
 }
 
 .float-balloon:nth-child(1) {
-    background: var(--primary-color);
+    filter: drop-shadow(0 0 8px rgba(255, 107, 157, 0.6));
 }
 
 .float-balloon:nth-child(2) {
-    background: var(--secondary-color);
+    filter: drop-shadow(0 0 8px rgba(255, 201, 60, 0.6));
 }
 
 .float-balloon:nth-child(3) {
-    background: var(--accent-color);
+    filter: drop-shadow(0 0 8px rgba(168, 230, 207, 0.6));
 }
 
 .float-balloon:nth-child(4) {
-    background: var(--purple);
+    filter: drop-shadow(0 0 8px rgba(199, 128, 250, 0.6));
 }
 
 .float-balloon:nth-child(5) {
-    background: var(--blue);
+    filter: drop-shadow(0 0 8px rgba(79, 172, 254, 0.6));
 }
 
 @keyframes floatUp {
     0% {
         transform: translateY(0) rotate(0deg);
-        opacity: 0.6;
+        opacity: 0.7;
     }
     50% {
-        opacity: 0.8;
+        opacity: 0.9;
     }
     100% {
         transform: translateY(-120vh) rotate(360deg);
@@ -1199,8 +1221,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     }
     
     .balloon-decoration {
-        width: 100px;
-        height: 140px;
+        width: 80px;
+        height: 80px;
+        font-size: 70px;
     }
     
     /* Ensure no overflow */
@@ -1828,8 +1851,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     }
     
     .balloon {
-        width: 40px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
     }
     
     .balloon-container {
@@ -1838,8 +1862,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     
     /* Floating Balloons */
     .float-balloon {
-        width: 30px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
     }
 }
 
