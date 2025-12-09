@@ -687,11 +687,13 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 
 /* Gallery Section */
 .gallery {
-    padding: 20px 0;
+    padding: 50px 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    overflow: visible;
+    overflow: hidden;
     width: 100%;
     max-width: 100vw;
+    height: auto;
+    min-height: 1600px;
 }
 
 /* Masonry Layout for Gallery */
@@ -702,6 +704,7 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
     gap: 0.8rem;
     width: 100%;
     max-width: 100%;
+    grid-auto-flow: dense;
 }
 
 @media (max-width: 1200px) {
@@ -712,6 +715,9 @@ a, button, .btn-rsvp, .btn-map, .btn-call, .gallery-item {
 }
 
 @media (max-width: 900px) {
+    .gallery { 
+        min-height: 1750px;
+    }
     .gallery-masonry {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: 200px;
